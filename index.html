@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Riftbound Companion App</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Alegreya+Sans:wght@300;400;500;700&display=swap');
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#0A0A0F;color:#E8E4D9;font-family:'Alegreya Sans',sans-serif;min-height:100vh}
+  .hero{text-align:center;padding:80px 20px 40px;background:radial-gradient(ellipse at 30% 20%,rgba(201,168,76,.08),transparent 60%),radial-gradient(ellipse at 70% 80%,rgba(139,37,0,.06),transparent 60%)}
+  .logo{font-family:'Cinzel',serif;font-size:42px;font-weight:900;letter-spacing:8px;background:linear-gradient(135deg,#E8C84C,#C9A84C,#8A7535);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+  .sub{font-size:14px;color:#5A5750;letter-spacing:4px;text-transform:uppercase;margin-top:4px}
+  .tagline{font-size:18px;color:#9A9688;max-width:600px;margin:24px auto 0;line-height:1.6}
+  .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;max-width:900px;margin:40px auto;padding:0 20px}
+  .card{padding:24px;background:#13131A;border:1px solid rgba(201,168,76,.15);border-radius:14px}
+  .card h3{font-family:'Cinzel',serif;font-size:16px;color:#C9A84C;margin-bottom:8px;letter-spacing:1px}
+  .card p{font-size:14px;color:#9A9688;line-height:1.5}
+  .screens{text-align:center;padding:40px 20px}
+  .screens h2{font-family:'Cinzel',serif;font-size:24px;color:#C9A84C;letter-spacing:3px;margin-bottom:24px}
+  .screen-grid{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;max-width:900px;margin:0 auto}
+  .screen-item{width:160px;padding:16px;background:#13131A;border:1px solid rgba(201,168,76,.15);border-radius:12px;text-align:center}
+  .screen-icon{font-family:'Cinzel',serif;font-size:28px;color:#C9A84C;margin-bottom:8px}
+  .screen-name{font-size:13px;color:#E8E4D9;font-weight:600}
+  .screen-desc{font-size:11px;color:#5A5750;margin-top:4px}
+  .rules{max-width:700px;margin:40px auto;padding:0 20px}
+  .rules h2{font-family:'Cinzel',serif;font-size:20px;color:#C9A84C;letter-spacing:2px;margin-bottom:16px;text-align:center}
+  .rule{padding:16px;background:#13131A;border:1px solid rgba(201,168,76,.15);border-radius:10px;margin-bottom:10px}
+  .rule h4{font-size:14px;color:#E8E4D9;margin-bottom:4px}
+  .rule p{font-size:13px;color:#9A9688;line-height:1.5}
+  .footer{text-align:center;padding:40px 20px;border-top:1px solid rgba(201,168,76,.1);margin-top:40px}
+  .footer p{font-size:11px;color:#5A5750;line-height:1.8}
+  .badge{display:inline-block;padding:4px 12px;border-radius:6px;font-size:11px;margin:2px}
+  .b-fury{background:rgba(255,107,53,.15);color:#FF6B35}
+  .b-calm{background:rgba(91,192,235,.15);color:#5BC0EB}
+  .b-mind{background:rgba(199,125,255,.15);color:#C77DFF}
+  .b-body{background:rgba(126,217,87,.15);color:#7ED957}
+  .b-order{background:rgba(255,217,61,.15);color:#FFD93D}
+  .b-chaos{background:rgba(255,107,138,.15);color:#FF6B8A}
+  .status{text-align:center;padding:20px;margin:20px auto;max-width:500px;background:#13131A;border:1px solid rgba(201,168,76,.15);border-radius:12px}
+  .status-label{font-size:11px;color:#5A5750;text-transform:uppercase;letter-spacing:2px}
+  .status-val{font-family:'Cinzel',serif;font-size:16px;color:#C9A84C;margin-top:4px}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="logo">RIFTBOUND</div>
+  <div class="sub">Companion App</div>
+  <p class="tagline">A personal companion app for the Riftbound TCG by Riot Games. Browse cards, track your collection, build decks, log games, and track points during matches.</p>
+  <div style="margin-top:16px">
+    <span class="badge b-fury">Fury</span>
+    <span class="badge b-calm">Calm</span>
+    <span class="badge b-mind">Mind</span>
+    <span class="badge b-body">Body</span>
+    <span class="badge b-order">Order</span>
+    <span class="badge b-chaos">Chaos</span>
+  </div>
+  <div class="status">
+    <div class="status-label">Platform</div>
+    <div class="status-val">iOS (React Native / Expo)</div>
+    <div style="margin-top:8px">
+      <div class="status-label">Status</div>
+      <div class="status-val">In Development — Personal Use</div>
+    </div>
+  </div>
+</div>
+
+<div class="features">
+  <div class="card">
+    <h3>Card Gallery</h3>
+    <p>Browse all Riftbound cards with search, domain/type/rarity/set filters, and sort options. Tap any card for full details including energy, power, text, and artist.</p>
+  </div>
+  <div class="card">
+    <h3>Collection Tracker</h3>
+    <p>Track which cards you own and how many copies. Stats bar shows unique count, total cards, and completion percentage. Add cards with a fullscreen overlay.</p>
+  </div>
+  <div class="card">
+    <h3>Deck Builder</h3>
+    <p>Stepped flow: Legend → Champion → 40 Main Deck → 3 Battlefields → 12 Runes → 8 Sideboard. Enforces domain identity and 3-copy limit across all sections.</p>
+  </div>
+  <div class="card">
+    <h3>Card Scanner</h3>
+    <p>Scan physical cards to identify them and see estimated prices. Add scanned cards to your collection. Track scan session history and total value.</p>
+  </div>
+  <div class="card">
+    <h3>Game Tracker</h3>
+    <p>Log game results with your deck, opponent's legend, win/loss, dice roll outcome, and notes. Per-deck W/L breakdown and overall win rate stats.</p>
+  </div>
+  <div class="card">
+    <h3>Point Tracker</h3>
+    <p>Fullscreen split-screen life counter for 2/3/4 players. Opponent panel rotated 180° for across-the-table play. Built-in D20 dice roller. Supports 8, 9, and 11 point targets.</p>
+  </div>
+</div>
+
+<div class="screens">
+  <h2>App Screens</h2>
+  <div class="screen-grid">
+    <div class="screen-item"><div class="screen-icon">C</div><div class="screen-name">Cards</div><div class="screen-desc">Full gallery with filters</div></div>
+    <div class="screen-item"><div class="screen-icon">L</div><div class="screen-name">Collection</div><div class="screen-desc">Track owned cards</div></div>
+    <div class="screen-item"><div class="screen-icon">S</div><div class="screen-name">Scan</div><div class="screen-desc">Identify & price cards</div></div>
+    <div class="screen-item"><div class="screen-icon">D</div><div class="screen-name">Decks</div><div class="screen-desc">Build legal decks</div></div>
+    <div class="screen-item"><div class="screen-icon">M</div><div class="screen-name">More</div><div class="screen-desc">Games, points, settings</div></div>
+  </div>
+</div>
+
+<div class="rules">
+  <h2>Deck Building Rules Enforced</h2>
+  <div class="rule"><h4>Domain Identity</h4><p>Legend defines 2 domains. All main deck, sideboard, and rune cards must match these domains.</p></div>
+  <div class="rule"><h4>Deck Structure</h4><p>1 Legend + 1 Champion + 40 Main Deck + 3 Battlefields + 12 Runes + 0 or 8 Sideboard.</p></div>
+  <div class="rule"><h4>Copy Limit</h4><p>Maximum 3 copies of any card across main deck, sideboard, and chosen champion combined.</p></div>
+  <div class="rule"><h4>Champion Matching</h4><p>Chosen Champion must match the Legend's champion identity and domain colors.</p></div>
+</div>
+
+<div class="footer">
+  <p>Riftbound Companion is a personal fan project for educational purposes.<br>
+  Not affiliated with or endorsed by Riot Games.<br>
+  Created under Riot Games' "Legal Jibber Jabber" policy.<br>
+  All card data, images, and trademarks are property of Riot Games.<br><br>
+  Built with React Native, Expo, and the Riot Games API.<br>
+  Free to use. No monetization. No ads.<br><br>
+  &copy; 2025 Riftbound Companion</p>
+</div>
+
+</body>
+</html>
